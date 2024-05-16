@@ -1,104 +1,104 @@
 function displayQuiz() {
     const questions = [
         {
-            question: "You've been mysteriously invited to an unfamiliar realm known as Fruitville, accessible only within your dreams. The invitation expires tonight.",
-            choices: ["I don't know, seems risky", "Sounds fun, let's go on an adventure"],
+            question: "You have been invited to attend a secret academy, Covens of Care, where mythical beings learn the art of healing! It is located at the fantastical land of Nurseria, a realm filled with magical creatures and great healers. The secret letter will burn after you have made your choice.",
+            choices: ["I’m not sure…seems suspicious…am I even qualified??", "OMG an adventure? Let’s go!"],
             weights: [
                 {judgingScore: +3, perceivingScore: 0 }, // Weight for first choice
                 {perceivingScore: +1, judgingScore:0 }, // Weight for second choice
             ]
         },
         {
-            question: "You drift into a deep slumber after a long day. All of a sudden, the sweet scent of fruits start to fill the air.",
-            choices: ["Where is the smell coming from?", "Am I in Fruitville"],
+            question: "The letter burns and you have been teleported! However, it seems like the letter made a mistake and dropped you off at a mystical forest instead.",
+            choices: ["Is this a test for me?", "I’m scared, I’ve never been to a forest alone before."],
             weights: [
                 {thinkingScore: +1, feelingScore: 0 }, // Weight for first choice
                 {feelingScore: +3, thinkingScore: 0 } // Weight for second choice
             ]
         },
         {
-            question: "You open your eyes and see that you’re in Fruitville. It’s a sunny morning in Fruitville and fruits are getting ready to start their day. An apple approaches you...",
-            choices: ["This is crazy, I’m dreaming for sure!", "I wonder if there will be any new fruits"],
+            question: "Before you could make a move, you heard a loud growl from a cave nearby. It sounded like a mystical dragon.",
+            choices: ["A dragon?! I want to see it for myself!", "You approach the cave cautiously, listening for further noises for clues about the dragon’s mood."],
             weights: [
                 {intuitionScore: +3, sensingScore: 0 } , // Weight for first choice
                 {sensingScore: +1, intuitionScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question: "The apple introduces itself as the Mayor of Fruitville.  “Will you be joining us for the FruitFest at noon? It’s an event meant to welcome newcomers and tourists. And yes, there will be plenty of food!",
-            choices: ["“Of course!”", "“I’ll think about it..”"],
+            question: "The dragon has hurt its wings and is unable to fly! Looks like it needs some serious medical help…",
+            choices: ["Observe the dragon’s overall behaviour and breathing patterns to gauge the severity of the wound", "Assess the wound in detail to find out what type of medication it needs."],
             weights: [
                 {perceivingScore: +1, judgingScore: 0 } , // Weight for first choice
                 {judgingScore: +3, perceivingScore: 0 }, // Weight for second choice
             ]
         },
         {
-            question: "As you finish your conversation with the Mayor, you can't help but wonder..",
-            choices: ["What food will there be?", "Do fruits eat fruits?"],
+            question: "After assessing the dragon’s wounds, you determine it needs a rare herb found only on a treacherous mountain peak. What would you do?",
+            choices: ["Trust your instincts and set off for the mountain, determined to get the herbs quickly.", "Carefully plan out the safest and fastest route you would take, gathering supplies before embarking on the journey."],
             weights: [
                 {sensingScore: +1, intuitionScore: 0 } , // Weight for first choice
                 {intuitionScore: +3, sensingScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question:"While wandering Fruitville, you notice nobody questioning a human among the fruits. Looking down, you see your limbs, but realize fruits also have their own…",
-            choices: ["Am I still a human?", "Am I a fruit?"],
+            question:"You managed to find the rare herb, but it’s guarded by a territorial fairy. How will you convince her to let you have the herb?",
+            choices: ["Offer a trade! You can offer the fairy the magic potion you had in your pocket.", "Try to talk to the fairy! You try to strike a conversation to understand why she might be territorial and eventually explain the dragon’s need for help."],
             weights: [
                 {thinkingScore: +1, feelingScore: 0 } , // Weight for first choice
                 {feelingScore: +3, thinkingScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question:"As you stroll along,  your stomach starts to rumble. At that moment, the town clock rings for noon and you decide to head for the FruitFest",
-            choices: ["I’ll make sure to bring some cash for the food stalls", "I can’t wait to explore the culture of Fruitville"],
+            question:"The fairy felt touched as you were kind to her. You got the herb successfully and returned to the dragon’s cave, but it’s reluctant to let you apply it. How will you gain its trust?",
+            choices: ["Try to monitor it’s behaviour towards you as you reach out your hand to pet it", "Show him the benefits of the herb and that you are just trying to help."],
             weights: [
                 {sensingScore: +1, intuitionScore: 0 } , // Weight for first choice
                 {intuitionScore: +3, sensingScore: 0 } , // Weight for intuition 
             ]
         },
         {
-            question:"You’ve enjoyed your time at the FruitFest, but your time at Fruitville is coming to an end. How do you want to spend your last few minutes at Fruitville?",
-            choices: ["I need some time alone to process", "I want to socialize and make the most of my visit"],
+            question:"With your gentle touch and the power of the rare herb, the dragon's wings begin to heal. It lets out a grateful roar, showering you with sparkling scales as a token of appreciation.",
+            choices: ["Phew! So glad that I didn’t get eaten", "Woah, did I just save a dragon?"],
             weights: [
-                {introvertScore: +1, extrovertScore: 0 } , // Weight for first choice
-                {extrovertScore: +3, introvertScore: 0 } , // Weight for second choice
-            ]
-        },
-        {
-            question:"As you prepare to leave Fruitville, the Mayor expresses gratitude for visiting and tells you that your FruitCard will arrive in the mail soon.",
-            choices: ["Finally! That was a strange experience", "Was I a fruit the entire time? I feel so confused"],
-            weights: [
-                {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
+                {thinkingScore: +3, feelingScore: 0  } , // Weight for first choice
                 {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question:"While you slowly drift back to reality, memories of your time in Fruitville flood your mind.",
-            choices: ["I can’t stop thinking about the details of what happened", "I feel bittersweet and reminisce about my experience"],
-            weights: [
-                {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
-                {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
-            ]
-        },
-        {
-            question:"You awaken from your nap on the couch and see that it’s almost time for dinner. Just then, you get a message from a friend asking you to join them for dinner.",
-            choices: ["Let’s go! I need to tell a friend about my dream", "Have dinner at home and relax instead"],
-            weights: [
-                {extrovertScore: +3, introvertScore: 0 } , // Weight for first choice
-                {introvertScore: +1, extrovertScore: 0 } , // Weight for second choice
-            ]
-        },
-        {
-            question:"The next day you hear a ring at your door, your FruitCard has arrived with a letter that says I’m welcome to visit again.",
-            choices: ["I’m already ready to visit again!", "I’ll think about visiting again"],
+            question:" As you continue your journey through the forest, you stumble upon a hidden pathway. Would you take the unknown path ahead?",
+            choices: ["Absolutely! Can’t wait to know what else I will encounter ahead!", "I’ll think about it…"],
             weights: [
                 {perceivingScore: +3, judgingScore: 0 } , // Weight for first choice
                 {judgingScore: +1, perceivingScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question: "Processing your FruitCard...",
-            choices: ["Collect my Fruitcard!"],
+            question:"The path leads you to a glistening forest, and at the centre stands a magnificent griffin, its leg snagged in a magical snare.",
+            choices: ["Another mystical creature! Let’s try to bond with it!", "Oh god, let’s get this done with. I miss my bed already…"],
+            weights: [
+                {extrovertScore: +3, introvertScore: 0 } , // Weight for first choice
+                {introvertScore: +1, extrovertScore: 0 } , // Weight for second choice
+            ]
+        },
+        {
+            question:"The griffin, grateful for your help, offers to take you to the Covens of Care academy. Along the way, you rethink about your journey and encounters with the dragon, the fairy, and the griffin. What resonates the most with you?",
+            choices: ["I can’t stop thinking about how I managed to save so many creatures", "I feel bittersweet that my encounter with the mystical creatures have come to an end…"],
+            weights: [
+                {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
+                {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
+            ]
+        },
+        {
+            question:"As you arrived at the Covens of Care academy, you are filled with a sense of…",
+            choices: ["Relief. That was a fun journey but I’m a little tired now…", "Achievement. I enjoyed meeting so many mystical creatures today! Can’t wait to make new friends at the academy."],
+            weights: [
+                {introvertScore: +1, extrovertScore: 0 } , // Weight for first choice
+                {extrovertScore: +3, introvertScore: 0 } , // Weight for second choice
+            ]
+        },
+        {
+            question: "Processing your results...",
+            choices: ["Find out my nurse title!"],
             weights: [
                 {extrovertScore: 0, introvertScore: 0 }, // laceholder
                 {introvertScore: 0, extrovertScore: 0}, //Placeholder
