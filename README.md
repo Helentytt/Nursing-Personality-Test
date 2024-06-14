@@ -1,4 +1,4 @@
-<h1>FruitCard Odyssey<h1>
+<h1>Village Herb Store<h1>
 <img src="https://github.com/Gudetea/FruitCard-Odyssey/blob/main/Thumbnail.gif?raw=true"/>
 <h2>FruitCard Odyssey is a fruit personality quiz inspired by the MBTI personality types!</h2><br>
 The overall design of this personality quiz is also inspired by personality quizzes such as the Cosmos persona, what cake R U and Innate Traits quiz <br>
