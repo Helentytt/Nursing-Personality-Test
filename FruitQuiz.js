@@ -1,96 +1,96 @@
 function displayQuiz() {
     const questions = [
         {
-            question: "You have been invited to attend a secret academy, Covens of Care, where mythical beings learn the art of healing! It is located at the fantastical land of Nurseria, a realm filled with magical creatures and great healers. The secret letter will burn after you have made your choice.",
-            choices: ["I’m not sure…seems suspicious…am I even qualified??", "OMG an adventure? Let’s go!"],
+            question: "You finally arrive in Nurseria Village and find a cottage perfect for your herb shop. What's the first thing you do?",
+            choices: ["Make a detailed inventory and create a shopping list for any missing ingredients.", " Mingle with the villagers to learn about their health concerns and what herbs they might need."],
             weights: [
                 {judgingScore: +3, perceivingScore: 0 }, // Weight for first choice
                 {perceivingScore: +1, judgingScore:0 }, // Weight for second choice
             ]
         },
         {
-            question: "The letter burns and you have been teleported! However, it seems like the letter made a mistake and dropped you off at a mystical forest instead.",
-            choices: ["Is this a test for me?", "I’m scared, I’ve never been to a forest alone before."],
+            question: "A kind old woman approaches you, curious about your shop. She mentions a recent illness spreading through the village. How do you react?",
+            choices: ["Ask her detailed questions about the symptoms to diagnose the illness.", "Express concern and offer soothing words before focusing on potential remedies."],
             weights: [
                 {thinkingScore: +1, feelingScore: 0 }, // Weight for first choice
                 {feelingScore: +3, thinkingScore: 0 } // Weight for second choice
             ]
         },
         {
-            question: "Before you could make a move, you heard a loud growl from a cave nearby. It sounded like a mystical dragon.",
-            choices: ["A dragon?! I want to see it for myself!", "You approach the cave cautiously, listening for further noises for clues about the dragon’s mood."],
+            question: "You spend the next few days researching and experimenting with various herb combinations. You finally create a cure that you believe can help the villagers. What do you do next?",
+            choices: ["Feel confident in your research and decide to offer the cure to the kind old woman who first informed you about the illness", "Test the cure on yourself first to ensure it's safe."],
             weights: [
                 {intuitionScore: +3, sensingScore: 0 } , // Weight for first choice
                 {sensingScore: +1, intuitionScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question: "The dragon has hurt its wings and is unable to fly! Looks like it needs some serious medical help…",
-            choices: ["Observe the dragon’s overall behaviour and breathing patterns to gauge the severity of the wound", "Assess the wound in detail to find out what type of medication it needs."],
+            question: "The Villagers are feeling better thanks to your help. News about your herbal expertise spreads quickly and a young villager with passion approaches you. How do you feel about taking on an apprentice?",
+            choices: ["You're thrilled to share your knowledge and welcome the apprentice with open arms.", "You appreciate the help, but you're also hesitant to share your workspace."],
             weights: [
-                {perceivingScore: +1, judgingScore: 0 } , // Weight for first choice
-                {judgingScore: +3, perceivingScore: 0 }, // Weight for second choice
+                {extrovertScore: +3, introvertScore: 0 } , // Weight for first choice
+                {introvertScore: +1, extrovertScore: 0 }, // Weight for second choice
             ]
         },
         {
-            question: "After assessing the dragon’s wounds, you determine it needs a rare herb found only on a treacherous mountain peak. What would you do?",
-            choices: ["Trust your instincts and set off for the mountain, determined to get the herbs quickly.", "Carefully plan out the safest and fastest route you would take, gathering supplies before embarking on the journey."],
-            weights: [
-                {sensingScore: +1, intuitionScore: 0 } , // Weight for first choice
-                {intuitionScore: +3, sensingScore: 0 } , // Weight for second choice
-            ]
-        },
-        {
-            question:"You managed to find the rare herb, but it’s guarded by a territorial fairy. How will you convince her to let you have the herb?",
-            choices: ["Offer a trade! You can offer the fairy the magic potion you had in your pocket.", "Try to talk to the fairy! You try to strike a conversation to understand why she might be territorial and eventually explain the dragon’s need for help."],
-            weights: [
-                {thinkingScore: +1, feelingScore: 0 } , // Weight for first choice
-                {feelingScore: +3, thinkingScore: 0 } , // Weight for second choice
-            ]
-        },
-        {
-            question:"The fairy felt touched as you were kind to her. You got the herb successfully and returned to the dragon’s cave, but it’s reluctant to let you apply it. How will you gain its trust?",
-            choices: ["Try to monitor it’s behaviour towards you as you reach out your hand to pet it", "Show him the benefits of the herb and that you are just trying to help."],
-            weights: [
-                {sensingScore: +1, intuitionScore: 0 } , // Weight for first choice
-                {intuitionScore: +3, sensingScore: 0 } , // Weight for intuition 
-            ]
-        },
-        {
-            question:"With your gentle touch and the power of the rare herb, the dragon's wings begin to heal. It lets out a grateful roar, showering you with sparkling scales as a token of appreciation.",
-            choices: ["Phew! So glad that I didn’t get eaten", "Woah, did I just save a dragon?"],
-            weights: [
-                {thinkingScore: +3, feelingScore: 0  } , // Weight for first choice
-                {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
-            ]
-        },
-        {
-            question:" As you continue your journey through the forest, you stumble upon a hidden pathway. Would you take the unknown path ahead?",
-            choices: ["Absolutely! Can’t wait to know what else I will encounter ahead!", "I’ll think about it…"],
+            question: "After a few days, a traveller finds your shop and seeks help as his friend has fallen ill and requires immediate attention. You follow him to check up on his friend…",
+            choices: ["Observe the patient’s overall behaviour and breathing patterns to gauge the severity of the wound.", "Assess the wound in detail to find out what type of medication it needs."],
             weights: [
                 {perceivingScore: +3, judgingScore: 0 } , // Weight for first choice
                 {judgingScore: +1, perceivingScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question:"The path leads you to a glistening forest, and at the centre stands a magnificent griffin, its leg snagged in a magical snare.",
-            choices: ["Another mystical creature! Let’s try to bond with it!", "Oh god, let’s get this done with. I miss my bed already…"],
+            question:"After assessing the patient’s wounds, you determine it needs a rare herb found only on a treacherous mountain peak. What would you do?",
+            choices: ["Carefully plan out the safest route you would take, gathering supplies before embarking", "Trust your instincts and set off for the mountain!"],
             weights: [
-                {extrovertScore: +3, introvertScore: 0 } , // Weight for first choice
-                {introvertScore: +1, extrovertScore: 0 } , // Weight for second choice
+                {intuitionScore: +3, sensingScore: 0 } , // Weight for first choice
+                {sensingScore: +1, intuitionScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question:"The griffin, grateful for your help, offers to take you to the Covens of Care academy. Along the way, you rethink about your journey and encounters with the dragon, the fairy, and the griffin. What resonates the most with you?",
-            choices: ["I can’t stop thinking about how I managed to save so many creatures", "I feel bittersweet that my encounter with the mystical creatures have come to an end…"],
+            question:"As you battle the elements and overcome challenging terrain, what motivates you most to press on?",
+            choices: ["Your keen observation skills, allowing you to come up with solutions to tackle the changing environment.", "The commitment you made to the traveller and the unwavering belief in your ability to find the cure."],
+            weights: [
+                {perceivingScore: +3, judgingScore: 0 } , // Weight for first choice
+                {judgingScore: +1, perceivingScore: 0 } , // Weight for intuition 
+            ]
+        },
+        {
+            question:"Finally, you reach the peak and discover the precious herb but you also notice a territorial mountain goat guarding the area. How do you approach the situation?",
+            choices: ["Look for an alternate path or distraction to avoid confrontation with the goat.", "Get anxious as you try to talk to the goat to avoid agitating it"],
             weights: [
                 {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
                 {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
             ]
         },
         {
-            question:"As you arrived at the Covens of Care academy, you are filled with a sense of…",
-            choices: ["Relief. That was a fun journey but I’m a little tired now…", "Achievement. I enjoyed meeting so many mystical creatures today! Can’t wait to make new friends at the academy."],
+            question:"You manage to secure the herb and avoid the goat. You return and quickly apply your remedy to help the traveller's friend. What gives you more satisfaction?",
+            choices: ["Thankful that you trusted your instincts and acted quickly", "Witnessing the friend’s expressions relax as the pain gets relieved"],
+            weights: [
+                {intuitionScore: +3, sensingScore: 0 } , // Weight for first choice
+                {sensingScore: +1, intuitionScore: 0 } , // Weight for second choice
+            ]
+        },
+        {
+            question:" After a few days of recovery, the traveller and his friend offer you a valuable treasure in return for your help. What's your response?",
+            choices: ["Accept the treasure as you think of how it will be useful to your store.", "Initially decline, emphasising the satisfaction of just helping others."],
+            weights: [
+                {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
+                {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
+            ]
+        },
+        {
+            question:" After waving the travellers goodbye, you find yourself…",
+            choices: ["Planning about collecting more rare herbs to avoid climbing mountains for emergency situations again.", "Feeling a sense of achievement as you got the herb on time."],
+            weights: [
+                {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
+                {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
+            ]
+        },
+        {
+            question:"Just then, another customer comes into your store.",
+            choices: ["You put on a smile despite being exhausted. Maybe you need a break by yourself soon...", "You put on a huge smile, ready to transform your store into a bustling community hub, forming deeper relationships with various villagers."],
             weights: [
                 {introvertScore: +1, extrovertScore: 0 } , // Weight for first choice
                 {extrovertScore: +3, introvertScore: 0 } , // Weight for second choice
@@ -98,7 +98,7 @@ function displayQuiz() {
         },
         {
             question: "Processing your results...",
-            choices: ["Find out my nurse title!"],
+            choices: ["Find out my inner nurse type!"],
             weights: [
                 {extrovertScore: 0, introvertScore: 0 }, // laceholder
                 {introvertScore: 0, extrovertScore: 0}, //Placeholder
