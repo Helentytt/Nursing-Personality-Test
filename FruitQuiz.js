@@ -121,18 +121,18 @@ function displayQuiz() {
 
     function displayQuestionImage(questionIndex) {
         const imageURLs = [
-            "QN 1,png",
-            "QN 2.png",
+            "QN1,png",
+            "QN2.png",
             "QN3.png",
             "QN4.png",
             "QN5.png",
             "QN6.png",
-            "QN 7.png",
-            "QN 8.png",
-            "QN 9.png",
-            "QN 10.png",
-            "QN 11.png",
-            "QN 12.png",
+            "QN7.png",
+            "QN8.png",
+            "QN9.png",
+            "QN10.png",
+            "QN11.png",
+            "QN12.png",
             "Loading.gif",
         ];
         const questionImageElement = document.getElementById('question-image');
