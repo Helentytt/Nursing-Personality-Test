@@ -4,103 +4,103 @@ function displayQuiz() {
             question: "You finally arrive in Nurseria Village and find a cottage perfect for your herb shop. What's the first thing you do?",
             choices: ["Make a detailed inventory and create a shopping list for any missing ingredients.", " Mingle with the villagers to learn about their health concerns and what herbs they might need."],
             weights: [
-                {judgingScore: +3, perceivingScore: 0 }, // Weight for first choice
-                {perceivingScore: +1, judgingScore:0 }, // Weight for second choice
+                {judgingScore: +3, perceivingScore: 0}, // Weight for first choice
+                {perceivingScore: +1, judgingScore:0}, // Weight for second choice
             ]
         },
         {
             question: "A kind old woman approaches you, curious about your shop. She mentions a recent illness spreading through the village. How do you react?",
             choices: ["Ask her detailed questions about the symptoms to diagnose the illness.", "Express concern and offer soothing words before focusing on potential remedies."],
             weights: [
-                {thinkingScore: +1, feelingScore: 0 }, // Weight for first choice
-                {feelingScore: +3, thinkingScore: 0 } // Weight for second choice
+                {thinkingScore: +1, feelingScore: 0}, // Weight for first choice
+                {feelingScore: +3, thinkingScore: 0} // Weight for second choice
             ]
         },
         {
             question: "You spend the next few days researching and experimenting with various herb combinations. You finally create a cure that you believe can help the villagers. What do you do next?",
             choices: ["Feel confident in your research and decide to offer the cure to the kind old woman who first informed you about the illness", "Test the cure on yourself first to ensure it's safe."],
             weights: [
-                {intuitionScore: +3, sensingScore: 0 } , // Weight for first choice
-                {sensingScore: +1, intuitionScore: 0 } , // Weight for second choice
+                {intuitionScore: +3, sensingScore: 0} , // Weight for first choice
+                {sensingScore: +1, intuitionScore: 0} , // Weight for second choice
             ]
         },
         {
             question: "The Villagers are feeling better thanks to your help. News about your herbal expertise spreads quickly and a young villager with passion approaches you. How do you feel about taking on an apprentice?",
             choices: ["You're thrilled to share your knowledge and welcome the apprentice with open arms.", "You appreciate the help, but you're also hesitant to share your workspace."],
             weights: [
-                {extrovertScore: +3, introvertScore: 0 } , // Weight for first choice
-                {introvertScore: +1, extrovertScore: 0 }, // Weight for second choice
+                {extrovertScore: +3, introvertScore: 0} , // Weight for first choice
+                {introvertScore: +1, extrovertScore: 0}, // Weight for second choice
             ]
         },
         {
             question: "After a few days, a traveller finds your shop and seeks help as his friend has fallen ill and requires immediate attention. You follow him to check up on his friend…",
             choices: ["Observe the patient’s overall behaviour and breathing patterns to gauge the severity of the wound.", "Assess the wound in detail to find out what type of medication it needs."],
             weights: [
-                {perceivingScore: +3, judgingScore: 0 } , // Weight for first choice
-                {judgingScore: +1, perceivingScore: 0 } , // Weight for second choice
+                {perceivingScore: +3, judgingScore: 0} , // Weight for first choice
+                {judgingScore: +1, perceivingScore: 0} , // Weight for second choice
             ]
         },
         {
             question:"After assessing the patient’s wounds, you determine it needs a rare herb found only on a treacherous mountain peak. What would you do?",
             choices: ["Carefully plan out the safest route you would take, gathering supplies before embarking", "Trust your instincts and set off for the mountain!"],
             weights: [
-                {intuitionScore: +3, sensingScore: 0 } , // Weight for first choice
-                {sensingScore: +1, intuitionScore: 0 } , // Weight for second choice
+                {intuitionScore: +3, sensingScore: 0} , // Weight for first choice
+                {sensingScore: +1, intuitionScore: 0} , // Weight for second choice
             ]
         },
         {
             question:"As you battle the elements and overcome challenging terrain, what motivates you most to press on?",
             choices: ["Your keen observation skills, allowing you to come up with solutions to tackle the changing environment.", "The commitment you made to the traveller and the unwavering belief in your ability to find the cure."],
             weights: [
-                {perceivingScore: +3, judgingScore: 0 } , // Weight for first choice
-                {judgingScore: +1, perceivingScore: 0 } , // Weight for intuition 
+                {perceivingScore: +3, judgingScore: 0} , // Weight for first choice
+                {judgingScore: +1, perceivingScore: 0} , // Weight for intuition 
             ]
         },
         {
             question:"Finally, you reach the peak and discover the precious herb but you also notice a territorial mountain goat guarding the area. How do you approach the situation?",
             choices: ["Look for an alternate path or distraction to avoid confrontation with the goat.", "Get anxious as you try to talk to the goat to avoid agitating it"],
             weights: [
-                {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
-                {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
+                {thinkingScore: +3, feelingScore: 0} , // Weight for first choice
+                {feelingScore: +1, thinkingScore: 0} , // Weight for second choice
             ]
         },
         {
             question:"You manage to secure the herb and avoid the goat. You return and quickly apply your remedy to help the traveller's friend. What gives you more satisfaction?",
             choices: ["Thankful that you trusted your instincts and acted quickly", "Witnessing the friend’s expressions relax as the pain gets relieved"],
             weights: [
-                {intuitionScore: +3, sensingScore: 0 } , // Weight for first choice
-                {sensingScore: +1, intuitionScore: 0 } , // Weight for second choice
+                {intuitionScore: +3, sensingScore: 0} , // Weight for first choice
+                {sensingScore: +1, intuitionScore: 0} , // Weight for second choice
             ]
         },
         {
             question:" After a few days of recovery, the traveller and his friend offer you a valuable treasure in return for your help. What's your response?",
             choices: ["Accept the treasure as you think of how it will be useful to your store.", "Initially decline, emphasising the satisfaction of just helping others."],
             weights: [
-                {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
-                {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
+                {thinkingScore: +3, feelingScore: 0} , // Weight for first choice
+                {feelingScore: +1, thinkingScore: 0} , // Weight for second choice
             ]
         },
         {
             question:" After waving the travellers goodbye, you find yourself…",
             choices: ["Planning about collecting more rare herbs to avoid climbing mountains for emergency situations again.", "Feeling a sense of achievement as you got the herb on time."],
             weights: [
-                {thinkingScore: +3, feelingScore: 0 } , // Weight for first choice
-                {feelingScore: +1, thinkingScore: 0 } , // Weight for second choice
+                {thinkingScore: +3, feelingScore: 0} , // Weight for first choice
+                {feelingScore: +1, thinkingScore: 0} , // Weight for second choice
             ]
         },
         {
             question:"Just then, another customer comes into your store.",
             choices: ["You put on a smile despite being exhausted. Maybe you need a break by yourself soon...", "You put on a huge smile, ready to transform your store into a bustling community hub, forming deeper relationships with various villagers."],
             weights: [
-                {introvertScore: +1, extrovertScore: 0 } , // Weight for first choice
-                {extrovertScore: +3, introvertScore: 0 } , // Weight for second choice
+                {introvertScore: +1, extrovertScore: 0} , // Weight for first choice
+                {extrovertScore: +3, introvertScore: 0} , // Weight for second choice
             ]
         },
         {
             question: "Processing your results...",
             choices: ["Find out my inner nurse type!"],
             weights: [
-                {extrovertScore: 0, introvertScore: 0 }, // laceholder
+                {extrovertScore: 0, introvertScore: 0}, // laceholder
                 {introvertScore: 0, extrovertScore: 0}, //Placeholder
             ]
         },
@@ -121,19 +121,19 @@ function displayQuiz() {
 
     function displayQuestionImage(questionIndex) {
         const imageURLs = [
-            "Q1.png",
-            "Q2.png",
-            "Q3.png",
-            "Q4.png",
-            "Q5.png",
-            "Q6.png",
-            "Q7.png",
-            "Q8.png",
-            "Q9.png",
-            "Q10.png",
-            "Q11.png",
-            "Q12.png",
-            "processing.GIF",
+            "QN 1,png",
+            "QN 2.png",
+            "QN3.png",
+            "QN4.png",
+            "QN5.png",
+            "QN6.png",
+            "QN 7.png",
+            "QN 8.png",
+            "QN 9.png",
+            "QN 10.png",
+            "QN 11.png",
+            "QN 12.png",
+            "Loading.gif",
         ];
         const questionImageElement = document.getElementById('question-image');
         questionImageElement.src = imageURLs[questionIndex];
@@ -252,11 +252,11 @@ function displayQuiz() {
         const questionElement = document.getElementById('question');
         const choiceContainers = document.getElementById('choices');
         const quizContainer = document.getElementById('quiz');
-        const thumbnailImage = document.querySelector('img[src="Thumbnail.gif"]');
+        //const thumbnailImage = document.querySelector('img[src="Thumbnail.gif"]');
         questionElement.remove();
         choiceContainers.remove();
         quizContainer.remove();
-        thumbnailImage.remove();
+        //thumbnailImage.remove();
 
         displayImage(mbtiTypeString);
 
