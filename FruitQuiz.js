@@ -266,22 +266,22 @@ function displayQuiz() {
     //Function to calculate MBTI type and return image URL 
         function getMBTIImageUrl(mbtiTypeString) {
             const MBTIImageUrls = {
-                "ENTJ": "Lemon.png",
-                "INTJ": "Pomegranate.png", 
-                "ENTP": "Dragon Fruit.png",
-                "INTP": "Grape.png",
-                "ENFJ": "Peach.png",
-                "INFJ": "Fig.png",
-                "ENFP": "Watermelon.png",
-                "INFP": "Cherry.png",
-                "ESFJ": "Orange.png",
-                "ISFJ": "Apple.png",
-                "ESTJ": "Banana.png",
-                "ISTJ": "Pear.png",
-                "ESTP": "Pineapple.png",
-                "ISTP": "Coconut.png",
-                "ESFP": "Mango.png",
-                "ISFP": "Strawberry.png",
+                "ENTJ": "6.png",
+                "INTJ": "3.png", 
+                "ENTP": "1.png",
+                "INTP": "3.png",
+                "ENFJ": "5.png",
+                "INFJ": "4.png",
+                "ENFP": "7.png",
+                "INFP": "4.png",
+                "ESFJ": "2.png",
+                "ISFJ": "2.png",
+                "ESTJ": "6.png",
+                "ISTJ": "8.png",
+                "ESTP": "1.png",
+                "ISTP": "8.png",
+                "ESFP": "7.png",
+                "ISFP": "9.png",
             };
             return MBTIImageUrls[mbtiTypeString] || ""
         }
